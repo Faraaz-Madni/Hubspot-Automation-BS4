@@ -69,9 +69,9 @@ def crawl_website(automated_list):
     for j in automated_list:
         print ("Currently looking at: ", j) #COME BACK TO THIS LATER, TESTING WITH A SINGLE WEBSITE RN.
         webpage = urlopen("HTTPS://WWW.NURSENEXTDOOR.COM")
-        extracted_html = page.read().decode("utf-8")
-        
-        extracted_soup = BeautifulSoup(html,"html.parser")
+        extracted_html = webpage.read().decode("utf-8")
+
+        extracted_soup = BeautifulSoup(extracted_html,"html.parser")
         extracted_soup.get_text()
         print(extracted_soup)
 
